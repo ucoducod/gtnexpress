@@ -30,6 +30,12 @@ export GEM_HOME="$HOME/.gem"
 gem install cocoapods -v 1.11.2
 
 # Install CocoaPods dependencies.
-cd ios && pod install # run `pod install` in the `ios` directory.
+echo "change to ios folder"
+cd /Volumes/workspace/repository/ios
+pwd
+
+#cd ios && pod install # run `pod install` in the `ios` directory.
+echo "installing pods'
+pod install
 
 exit 0
