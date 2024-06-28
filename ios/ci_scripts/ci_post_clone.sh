@@ -16,18 +16,18 @@ git clone https://github.com/flutter/flutter.git --depth 1 -b 2.10.5 $HOME/flutt
 export PATH="$PATH:$HOME/flutter/bin"
 which flutter
 #export PATH=$HOME/development/flutter/bin:$PATH
-echo $HOME/development/flutter/
+# echo $HOME/development/flutter/
 
 echo "1 podhelper start"
-cat $HOME/development/flutter/packages/flutter_tools/bin/pod_helper.rb
+# cat $HOME/development/flutter/packages/flutter_tools/bin/pod_helper.rb
 echo "1 podhelper done"
-cat $HOME/development/flutter/packages/flutter_tools/bin/podhelper.rb
+cat $HOME/flutter/packages/flutter_tools/bin/pod_helper.rb
 echo "2 podhelper done"
-
 echo "sed start"
-sed -i 's@File.exists@File.exist@g' $HOME/development/flutter/packages/flutter_tools/bin/podhelper.rb
-cat $HOME/development/flutter/packages/flutter_tools/bin/podhelper.rb
-echo "sed start"
+sed -i'' -e 's@File.exists@File.exist@g' $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
+echo "sed end"
+cat $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
+echo "sed review complete"
 
 flutter --version
 echo "flutter found"
