@@ -9,18 +9,20 @@ cd $CI_PRIMARY_REPOSITORY_PATH # change working directory to the root of your cl
 # echo "$CI_PRIMARY_REPOSITORY_PATH"
 echo "cd ok"
 #echo $HOME
+
+
 # Install Flutter using git.
 git clone https://github.com/flutter/flutter.git --depth 1 -b 2.10.5 $HOME/flutter
 export PATH="$PATH:$HOME/flutter/bin"
 #export PATH=$HOME/development/flutter/bin:$PATH
-
 flutter --version
 echo "flutter found"
 # Install Flutter artifacts for iOS (--ios), or macOS (--macos) platforms.
 flutter precache --ios
-
 # Install Flutter dependencies.
 flutter pub get
+
+
 
 # Install CocoaPods using Homebrew.
 HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew's automatic updates.
@@ -40,6 +42,6 @@ pwd
 
 #cd ios && pod install # run `pod install` in the `ios` directory.
 echo "installing pods"
-pod install
+/Users/local/.gem/ruby/2.6.0/bin pod install
 # /usr/local/opt/ruby@3.1/bin pod install
 exit 0
