@@ -27,8 +27,8 @@ HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew's automatic updates.
 # brew install cocoapods
 # brew install cocoapods -v 1.11.2
 export GEM_HOME="$HOME/.gem"
-sudo gem install cocoapods -v 1.11.2
-
+gem install cocoapods -v 1.11.2
+export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"# pod install
 # Install CocoaPods dependencies.
 echo "change to ios folder"
 cd /Volumes/workspace/repository/ios
@@ -36,6 +36,6 @@ pwd
 
 #cd ios && pod install # run `pod install` in the `ios` directory.
 echo "installing pods"
-/usr/local/lib/ruby/gems/3.1.0/bin/pod install
-
+pod install
+# /usr/local/opt/ruby@3.1/bin pod install
 exit 0
