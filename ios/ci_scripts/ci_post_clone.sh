@@ -42,6 +42,6 @@ pwd
 
 #cd ios && pod install # run `pod install` in the `ios` directory.
 echo "installing pods"
-/Users/local/.gem/ruby/2.6.0/bin pod install
+/Users/local/.gem/ruby/2.6.0/bin/pod install
 # /usr/local/opt/ruby@3.1/bin pod install
 exit 0
