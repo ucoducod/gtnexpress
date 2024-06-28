@@ -26,11 +26,15 @@ flutter pub get
 
 # Install CocoaPods using Homebrew.
 HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew's automatic updates.
+brew remove cocoapods
 # brew install cocoapods
 # brew install cocoapods -v 1.11.2
 # export GEM_HOME="$HOME/.gem"
 export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
+# export PATH=$GEM_HOME/bin:$PATH#FIX: You don't have /Users/local/.gem/ruby/2.6.0/bin in your PATH,
+export PATH="$PATH:$GEM_HOME/bin"
+#arch -x86_64 gem install cocoapods -v 1.11.2 --user-install
+#arch -x86_64 gem install ffi
 gem install cocoapods -v 1.11.2 --user-install
 gem which cocoapods
 # gem install cocoapods -v 1.11.2
@@ -39,9 +43,10 @@ gem which cocoapods
 echo "change to ios folder"
 cd /Volumes/workspace/repository/ios
 pwd
+rm podfile.lock
 
 #cd ios && pod install # run `pod install` in the `ios` directory.
 echo "installing pods"
-/Users/local/.gem/ruby/2.6.0/bin/pod install
+arch -x86_64 /Users/local/.gem/ruby/2.6.0/bin/pod install
 # /usr/local/opt/ruby@3.1/bin pod install
 exit 0
