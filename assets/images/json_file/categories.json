@@ -1,0 +1,134 @@
+[
+  {
+    "Vegetables": [
+      {
+        "name": "Potato",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy but high fat"
+      },
+      {
+        "name": "Cabbage",
+        "minOrder": 1,
+        "pricePerKg": 10,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy but be aware"
+      },
+      {
+        "name": "Lady Finger",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy green vegetable healthy for eyesight"
+      },
+      {
+        "name": "Spinach",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy green leafy"
+      },
+      {
+        "name": "Cauliflower",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      },
+      {
+        "name": "Capsicum",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy and green vegetable"
+      }
+    ]
+  },
+  {
+    "Fruits": [
+      {
+        "name": "Banana",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy helps in gaining weight"
+      },
+      {
+        "name": "Orange",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy and citrus"
+      },
+      {
+        "name": "Apple",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      }
+    ]
+  },
+  {
+    "Bakery": [
+      {
+        "name": "Cake",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      },
+      {
+        "name": "Cookies",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      }
+    ]
+  },
+  {
+    "Fish": [
+      {
+        "name": "Gold Fish",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      },
+      {
+        "name": "Luna",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      }
+    ]
+  },
+  {
+    "Poultry": [
+      {
+        "name": "White Egg",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      },
+      {
+        "name": "Brown Egg",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      },
+      {
+        "name": "Chicken meat",
+        "minOrder": 1.5,
+        "pricePerKg": 12.5,
+        "imageUrl": "assets/images/logo.png",
+        "description": "Very Healthy keeps doctor away"
+      }
+    ]
+  }
+]
