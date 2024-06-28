@@ -8,10 +8,11 @@ cd $CI_PRIMARY_REPOSITORY_PATH # change working directory to the root of your cl
 
 # echo "$CI_PRIMARY_REPOSITORY_PATH"
 echo "cd ok"
+#echo $HOME
 # Install Flutter using git.
-#git clone https://github.com/flutter/flutter.git --depth 1 -b stable $HOME/flutter
-#export PATH="$PATH:$HOME/flutter/bin"
-export PATH=$HOME/development/flutter/bin:$PATH
+git clone https://github.com/flutter/flutter.git --depth 1 -b 2.10.5 $HOME/flutter
+export PATH="$PATH:$HOME/flutter/bin"
+#export PATH=$HOME/development/flutter/bin:$PATH
 
 flutter --version
 echo "flutter found"
