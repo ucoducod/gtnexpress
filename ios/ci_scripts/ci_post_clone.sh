@@ -35,7 +35,7 @@ cd /Volumes/workspace/repository/ios
 pwd
 
 #cd ios && pod install # run `pod install` in the `ios` directory.
-echo "installing pods'
+echo "installing pods"
 pod install
 
 exit 0
