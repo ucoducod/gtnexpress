@@ -19,12 +19,13 @@ which flutter
 # echo $HOME/development/flutter/
 
 echo "1 podhelper start"
-cat $HOME/development/flutter/packages/flutter_tools/bin/podhelper.rb
+cat $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
 echo "1 podhelper done"
 # # cat $HOME/flutter/packages/flutter_tools/bin/pod_helper.rb
 # echo "2 podhelper done"
 echo "sed start"
-sed -i'' -e 's@File.exists@File.exist@g' $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
+# sed -i'' -e 's@File.exists@File.exist@g' $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
+sed -i'' -e 's/File.exists/File.exist/g' $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
 echo "sed end"
 echo "start file"
 cat $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
