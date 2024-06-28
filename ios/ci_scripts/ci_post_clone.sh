@@ -26,6 +26,7 @@ flutter pub get
 HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew's automatic updates.
 # brew install cocoapods
 # brew install cocoapods -v 1.11.2
+export GEM_HOME="$HOME/.gem"
 gem install cocoapods -v 1.11.2
 
 # Install CocoaPods dependencies.
