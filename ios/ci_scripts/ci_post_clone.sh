@@ -18,11 +18,11 @@ which flutter
 #export PATH=$HOME/development/flutter/bin:$PATH
 # echo $HOME/development/flutter/
 
-echo "1 podhelper start"
-cat $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
-echo "1 podhelper done"
-# # cat $HOME/flutter/packages/flutter_tools/bin/pod_helper.rb
-# echo "2 podhelper done"
+
+
+# echo "1 podhelper start"
+# cat $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
+# echo "1 podhelper done"
 echo "sed start"
 # sed -i'' -e 's@File.exists@File.exist@g' $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
 sed -i'' -e 's/File.exists/File.exist/g' $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
@@ -32,13 +32,10 @@ cat $HOME/flutter/packages/flutter_tools/bin/podhelper.rb
 echo "start file sed review complete"
 
 flutter --version
-echo "flutter found"
 # Install Flutter artifacts for iOS (--ios), or macOS (--macos) platforms.
 flutter precache --ios
 # Install Flutter dependencies.
 flutter pub get
-
-
 
 # Install CocoaPods using Homebrew.
 HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew's automatic updates.
