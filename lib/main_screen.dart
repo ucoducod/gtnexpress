@@ -3410,6 +3410,9 @@ class _FormRegisterState extends State<FormRegister> {
     ProvinceModel(id: "96", text: "Cà Mau"),
   ];
 
+  int _radioSelected = 1;
+  String _radioVal ="khach";
+
   void _processData() {
     // Process your data and upload to server
     if (widget.profile != null) {
@@ -3650,6 +3653,7 @@ class _FormRegisterState extends State<FormRegister> {
                         // _buildTextFieldAddress(),
                         // _buildTinh(),
                         // _buildQuan(),
+                        _buildRadio(),
                       ],
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
@@ -3702,10 +3706,10 @@ class _FormRegisterState extends State<FormRegister> {
                               Profile profile = Profile(
                                   username: _controllerUsername.text.toString(),
                                   // name: _controllerName.text.toString(),
-                                  name: "GTN",
+                                  name: "GTNE",
                                   email: _controllerEmail.text.toString(),
                                   // phone: _controllerPhone.text.toString(),
-                                  phone: "0000000000",
+                                  phone: $_radioVal,
                                   // address: _controllerAddress.text.toString(),
                                   address: "5a Chien thang",
                                   nganhang: _controllerBank.text.toString(),//pass
@@ -4037,6 +4041,46 @@ class _FormRegisterState extends State<FormRegister> {
     //     ),
     //   ),
     // );
+  }
+
+  Widget _buildRadio() {
+    return Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left:8.0),
+                    child: Text(
+                      'Tài khoản:'
+                    style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                  Spacer(),
+                  Text('Khách hàng'),
+                  Radio(
+                    value: 1,
+                    groupValue: _radioSelected,
+                    activeColor: Colors.blue,
+                    onChanged: (value) {
+                      setState(() {
+                        _radioSelected = value;
+                        _radioVal = 'khach';
+                      });
+                    },
+                  ),
+                  Text('Shipper'),
+                  Radio(
+                    value: 2,
+                    groupValue: _radioSelected,
+                    activeColor: Colors.pink,
+                    onChanged: (value) {
+                      setState(() {
+                        _radioSelected = value;
+                        _radioVal = 'ship';
+                      });
+                    },
+                  )
+                ],
+              );
   }
 
   Widget _buildTextFieldUsername() {
