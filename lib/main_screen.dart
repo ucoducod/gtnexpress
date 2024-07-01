@@ -3706,10 +3706,10 @@ class _FormRegisterState extends State<FormRegister> {
                               Profile profile = Profile(
                                   username: _controllerUsername.text.toString(),
                                   // name: _controllerName.text.toString(),
-                                  name: "GTNE",
+                                  name: "GTN",
                                   email: _controllerEmail.text.toString(),
                                   // phone: _controllerPhone.text.toString(),
-                                  phone: $_radioVal,
+                                  phone: "$_radioVal",
                                   // address: _controllerAddress.text.toString(),
                                   address: "5a Chien thang",
                                   nganhang: _controllerBank.text.toString(),//pass
@@ -4045,42 +4045,42 @@ class _FormRegisterState extends State<FormRegister> {
 
   Widget _buildRadio() {
     return Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left:8.0),
-                    child: Text(
-                      'Tài khoản:'
-                    style: TextStyle(color: Colors.black),
-                    ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left:8.0),
+                  child: Text(
+                    'Tài khoản:',
+                  style: TextStyle(color: Colors.black),
                   ),
-                  Spacer(),
-                  Text('Khách hàng'),
-                  Radio(
-                    value: 1,
-                    groupValue: _radioSelected,
-                    activeColor: Colors.blue,
-                    onChanged: (value) {
-                      setState(() {
-                        _radioSelected = value;
-                        _radioVal = 'khach';
-                      });
-                    },
-                  ),
-                  Text('Shipper'),
-                  Radio(
-                    value: 2,
-                    groupValue: _radioSelected,
-                    activeColor: Colors.pink,
-                    onChanged: (value) {
-                      setState(() {
-                        _radioSelected = value;
-                        _radioVal = 'ship';
-                      });
-                    },
-                  )
-                ],
-              );
+                ),
+                Spacer(),
+                Text('Khách hàng'),
+                Radio(
+                  value: 1,
+                  groupValue: _radioSelected,
+                  activeColor: Colors.blue,
+                  onChanged: (value) {
+                    setState(() {
+                      _radioSelected = value;
+                      _radioVal = 'khach';
+                    });
+                  },
+                ),
+                Text('Shipper'),
+                Radio(
+                  value: 2,
+                  groupValue: _radioSelected,
+                  activeColor: Colors.pink,
+                  onChanged: (value) {
+                    setState(() {
+                      _radioSelected = value;
+                      _radioVal = 'ship';
+                    });
+                  },
+                )
+              ],
+            );
   }
 
   Widget _buildTextFieldUsername() {
