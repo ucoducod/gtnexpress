@@ -10319,10 +10319,10 @@ class _FiltersScreenSGState extends State<FiltersScreenSG> {
                                       ),
                                       onTap: () {
                                         setState(() {
-                                          _selectedenddatexk = null;
-                                          _selectedstartdatexk = null;
-                                          globals["startdatexk"] = null;
-                                          globals["enddatexk"] = null;
+                                          _selectedstartdatehh = null;
+                                          _selectedenddatehh = null;
+                                          globals["startdatehh"] = null;
+                                          globals["enddatehh"] = null;
                                         });
                                       },
                                       child: Padding(

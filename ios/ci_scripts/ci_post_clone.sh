@@ -56,7 +56,7 @@ brew install cocoapods
 echo "change to ios folder"
 cd /Volumes/workspace/repository/ios
 pwd
-rm podfile.lock
+#rm podfile.lock
 pod install
 # #cd ios && pod install # run `pod install` in the `ios` directory.
 # echo "installing pods"
