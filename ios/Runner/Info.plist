@@ -25,9 +25,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>your usage description here</string>
+	<string>Ứng dụng cần truy cập camera để quét mã QRcode. Hoặc chụp hình để cập nhật trạng thái giao hàng.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>your usage description here</string>
+	<string>Ứng dụng cần truy cập micro để chụp hình ghi âm, để cập nhật trạng thái giao hàng</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
