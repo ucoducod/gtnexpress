@@ -7141,9 +7141,15 @@ class _TakePhotoState extends State<TakePhoto> {
     Future<void> _initCamera(CameraDescription description) async {
       _controller = CameraController(description, ResolutionPreset.medium, enableAudio: false);
       try {
-        _initializeControllerFuture = _controller.initialize();
-        // to notify the widgets that camera has been initialized and now camera preview can be done
-        setState(() {});
+        // _initializeControllerFuture = _controller.initialize();
+        // // to notify the widgets that camera has been initialized and now camera preview can be done
+        // setState(() {});
+        _initializeControllerFuture = _controller.initialize().then((_) {
+          if (!mounted) {
+            return;
+          }
+          setState(() {});
+        });
       }
       catch (e) {
         print(e);
@@ -7173,17 +7179,23 @@ class _TakePhotoState extends State<TakePhoto> {
 
     @override
     void initState() {
-    super.initState();
-    _getAvailableCameras();
-    // _controller = CameraController(
-    //   // Get a specific camera from the list of available cameras.
-    //   widget.camera as CameraDescription,
-    //   // Define the resolution to use.
-    //   ResolutionPreset.medium,
-    // );
-    // // Next, initialize the controller. This returns a Future.
-    // _initializeControllerFuture = _controller.initialize();
-  }
+      super.initState();
+      _getAvailableCameras();
+      // _controller = CameraController(
+      //   // Get a specific camera from the list of available cameras.
+      //   widget.camera as CameraDescription,
+      //   // Define the resolution to use.
+      //   ResolutionPreset.medium,
+      // );
+      // // Next, initialize the controller. This returns a Future.
+      // _initializeControllerFuture = _controller.initialize();
+    }
+
+    @override
+    void dispose() {
+      _controller?.dispose();
+      super.dispose();
+    }
 
   Future<XFile> takePicture() async {
     if (_controller.value.isTakingPicture) {
