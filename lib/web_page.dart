@@ -195,6 +195,7 @@ class _WebViewExampleState extends State<WebViewExample> {
         onPageFinished: (String url) {
           setState(() {
             // print('Page finished loading: $url');
+            Future.delayed(const Duration(seconds: 2), () {
             _controller.future.then((value) => value.evaluateJavascript('''
             if (document.contains(document.getElementById("mNavbar"))) {
                 document.getElementById("mNavbar").remove();
@@ -245,6 +246,7 @@ class _WebViewExampleState extends State<WebViewExample> {
             loggedIn = true;
             //   print("loggedin 2 " + loggedIn.toString());
             // }
+            });
           });
         },
         gestureNavigationEnabled: true,
