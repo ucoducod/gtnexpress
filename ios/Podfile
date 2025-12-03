@@ -48,24 +48,24 @@ end
 # end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
+
+    # MUST be first
+    flutter_additional_ios_build_settings(target)
+
     target.build_configurations.each do |config|
-      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 9.0
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
-      end
+
+      # iOS 12 minimum
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+
+      # Permission example
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
         '$(inherited)',
-        ## dart: PermissionGroup.camera
         'PERMISSION_CAMERA=1',
-        ]
-      config.build_settings['ENABLE_BITCODE'] = 'NO'
-    end
-    flutter_additional_ios_build_settings(target)
-  end
-end
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
+      ]
+
+      # Disable bitcode (Flutter requirement)
       config.build_settings['ENABLE_BITCODE'] = 'NO'
     end
   end
 end
+
